@@ -1,0 +1,34 @@
+﻿<Page x:Class="AppDev_Final_Project__Medical_Records_.pages.subpage.patient.ViewPatients"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AppDev_Final_Project__Medical_Records_.pages.subpage.patient"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ViewPatients">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 5">
+                <TextBox x:Name="txtSearch" HorizontalAlignment="Right" Width="150"/>
+                <Button x:Name="btnSearch" Content="Search" Width="75" Click="btnSearch_Click"/>
+                <Button x:Name="btnRefresh" Content="Refresh" Width="75" Click="btnRefresh_Click"/>
+            </StackPanel>
+            <DataGrid x:Name="ViewPatientDataGrid" IsReadOnly="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="First Name" Binding="{Binding fname}" Width="125"/>
+                    <DataGridTextColumn Header="Last Name" Binding="{Binding lname}" Width="125"/>
+                    <DataGridTextColumn Header="Sex" Binding="{Binding gender}" Width="50"/>
+                    <DataGridTextColumn Header="Age" Binding="{Binding age}"/>
+                    <DataGridTextColumn Header="Birthdate" Binding="{Binding dob}" Width="auto"/>
+                    <DataGridTextColumn Header="Contact" Binding="{Binding contact}" Width="auto"/>
+                    <DataGridTextColumn Header="Address" Binding="{Binding address}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>

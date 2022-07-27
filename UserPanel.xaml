@@ -1,0 +1,23 @@
+﻿<Window x:Class="AppDev_Final_Project__Medical_Records_.UserPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppDev_Final_Project__Medical_Records_"
+        mc:Ignorable="d"
+        Title="Health Records (User)" WindowStartupLocation="CenterScreen" Height="600" Width="1000" ResizeMode="CanMinimize" Closing="MainWindow_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" Height="50" Margin="10 10">
+            <Button x:Name="btnPatient" Content="Patient" MinWidth="100" Click="btnPatient_Click"/>
+            <Button x:Name="btnMedicine" Content="Medicine" MinWidth="100" Click="btnMedicine_Click"/>
+            <Button x:Name="btnProfile" Content="Profile" MinWidth="100" Click="btnProfile_Click"/>
+            <Button x:Name="btnLogout" Content="Logout" MinWidth="100" HorizontalAlignment="Right" Click="btnLogout_Click"/>
+        </DockPanel>
+        <Frame x:Name="Main" Grid.Row="1" NavigationUIVisibility="Hidden" Margin="10"></Frame>
+    </Grid>
+</Window>
